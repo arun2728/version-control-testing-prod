@@ -1,5 +1,6 @@
 const flowConfig = {
   "id": "69b5e37e-0e9f-4f8d-9329-cb31021f911d",
+  "slug": "BrainyOptician-8338",
   "name": "2 - API Basics",
   "nodes": [
     {
@@ -128,12 +129,12 @@ const flowConfig = {
             {
               "id": "187c2f4b-c23d-4545-abef-73dc897d6b7d",
               "role": "user",
-              "content": "Generate a detailed travel itinerary in JSON format based on the provided inputs.\n\nInputs:\n\n\\- {{triggerNode_1.output.destination}}\n\n\\- {{triggerNode_1.output.start_date}}\n\n\\- {{triggerNode_1.output.end_date}}\n\n\\- {{triggerNode_1.output.budget_usd}}\n\n\\- {{triggerNode_1.output.interests}}\n\nThe output should include:\n\n\\- destination name\n\n\\- start and end date\n\n\\- total budget in USD\n\n\\- a \"days\" array where each item represents one day of the trip\n\nEach day should include:\n\n\\- date\n\n\\- short title (e.g., \"Arrival and Local Exploration\")\n\n\\- description of planned activities\n\n\\- key locations or attractions\n\n\\- estimated daily cost in USD\n\nMake the itinerary realistic and aligned with the given interests (e.g., camping, hiking, sightseeing).\n\nEnsure the total of daily costs roughly matches the overall budget."
+              "content": "Generate a detailed travel itinerary in JSON format based on the provided inputs.\n\nInputs:\n- {{triggerNode_1.output.destination}}\n- {{triggerNode_1.output.start_date}}\n- {{triggerNode_1.output.end_date}}\n- {{triggerNode_1.output.budget_usd}}\n- {{triggerNode_1.output.interests}}\n\nThe output should include:\n- destination name\n- start and end date\n- total budget in USD\n- a \"days\" array where each item represents one day of the trip\n\nEach day should include:\n- date\n- short title (e.g., \"Arrival and Local Exploration\")\n- description of planned activities\n- key locations or attractions\n- estimated daily cost in USD\n\nMake the itinerary aligned with the given interests (e.g., camping, hiking, sightseeing).\n\nEnsure the total of daily costs roughly matches the overall budget."
             }
           ],
           "memories": "[]",
           "messages": "[]",
-          "nodeName": "Generate JSON",
+          "nodeName": "Generate Itinary",
           "attachments": "",
           "generativeModelName": [
             {
@@ -215,7 +216,9 @@ const flowConfig = {
     }
   ],
   "status": "active",
-  "created_at": "2026-02-02T06:07:10.280043+00:00"
+  "created_at": "2026-02-02T06:07:10.280043+00:00",
+  "description": "",
+  "trigger_id": null
 };
 
 export async function getNodesAndEdges(): Promise<{
