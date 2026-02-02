@@ -3,14 +3,14 @@ const flowConfig = {
   "name": "2 - API Basics",
   "nodes": [
     {
-      "id": "sticky-note-424",
+      "id": "sticky-note-899",
       "data": {
-        "width": 520,
-        "height": 429,
+        "width": 482,
+        "height": 483,
         "nodeId": "stickyNoteNode",
         "values": {
-          "text": "# **🍱 Lamatic SDK**\n\n---\n\nIntegrate your app to a flow that uses API trigger via **Lamatic SDK**. It provides a simple way to interact with the Lamatic AI platform, allowing you to execute flow and integrate AI capabilities into your applications.\n\n---\n\n**Setup in 3 easy steps:**\n\n1. Install  \n_npm install_ **_lamatic_**\n2. Import  \n_import { lamatic } from \"_ **_lamatic_**_\";_\n3. Integrate  \nconst res = await new **Lamatic**(  \n{apiKey:\"**_your-api-key_**\",  \nprojectId:\"**_your-project-id_**\",  \nendpoint:\"**_your-endpoint_**\"}).executeFlow(\"**_your-flow-id_**\",  \n**{_prompt:\"hey, how are you?\"}_**_);_\n\n---\n\n📖Read Docs - [SDK](https://lamatic.ai/docs/sdk)",
-          "color": "blue",
+          "text": "# **▶️Try it out**\n\n---\n\n1. Configure API Request Trigger  \n**👉🏻 Modify the Schema to pass additional input data.**\n2. Configure JSON Generate Node  \n_The Generate JSON Node is a specialized AI component that generates structured JSON data based on user input and predefined schemas. This node is particularly useful for applications requiring consistent data structures, API integrations, and automated data formatting._  \n**👉🏻 Modify the prompt and model to fine tune response**\n3. Return the generated response back to the client  \n**👉🏻 Modify the Schema to pass additional output parameters.**\n4. Run flow by clicking  \n▶️ **Test 👇🏻**\n5. Find Setup instructions to connect flow with your application. You can get the API keys from Settings.  \n**〈〉 Setup 👆🏻**",
+          "color": "yellow",
           "nodeId": "stickyNoteNode",
           "nodeName": "Sticky Note",
           "nodeType": "stickyNoteNode"
@@ -20,12 +20,12 @@ const flowConfig = {
       "zIndex": -10,
       "dragging": false,
       "measured": {
-        "width": 520,
-        "height": 429
+        "width": 482,
+        "height": 483
       },
       "position": {
-        "x": -594.764608793465,
-        "y": -192.4785440215834
+        "x": 321.66390049677454,
+        "y": -44.74250184043521
       },
       "selected": false,
       "draggable": true
@@ -59,14 +59,14 @@ const flowConfig = {
       "draggable": true
     },
     {
-      "id": "sticky-note-899",
+      "id": "sticky-note-424",
       "data": {
-        "width": 482,
-        "height": 483,
+        "width": 520,
+        "height": 429,
         "nodeId": "stickyNoteNode",
         "values": {
-          "text": "# **▶️Try it out**\n\n---\n\n1. Configure API Request Trigger  \n**👉🏻 Modify the Schema to pass additional input data.**\n2. Configure JSON Generate Node  \n_The Generate JSON Node is a specialized AI component that generates structured JSON data based on user input and predefined schemas. This node is particularly useful for applications requiring consistent data structures, API integrations, and automated data formatting._  \n**👉🏻 Modify the prompt and model to fine tune response**\n3. Return the generated response back to the client  \n**👉🏻 Modify the Schema to pass additional output parameters.**\n4. Run flow by clicking  \n▶️ **Test 👇🏻**\n5. Find Setup instructions to connect flow with your application. You can get the API keys from Settings.  \n**〈〉 Setup 👆🏻**",
-          "color": "yellow",
+          "text": "# **🍱 Lamatic SDK**\n\n---\n\nIntegrate your app to a flow that uses API trigger via **Lamatic SDK**. It provides a simple way to interact with the Lamatic AI platform, allowing you to execute flow and integrate AI capabilities into your applications.\n\n---\n\n**Setup in 3 easy steps:**\n\n1. Install  \n_npm install_ **_lamatic_**\n2. Import  \n_import { lamatic } from \"_ **_lamatic_**_\";_\n3. Integrate  \nconst res = await new **Lamatic**(  \n{apiKey:\"**_your-api-key_**\",  \nprojectId:\"**_your-project-id_**\",  \nendpoint:\"**_your-endpoint_**\"}).executeFlow(\"**_your-flow-id_**\",  \n**{_prompt:\"hey, how are you?\"}_**_);_\n\n---\n\n📖Read Docs - [SDK](https://lamatic.ai/docs/sdk)",
+          "color": "blue",
           "nodeId": "stickyNoteNode",
           "nodeName": "Sticky Note",
           "nodeType": "stickyNoteNode"
@@ -76,12 +76,12 @@ const flowConfig = {
       "zIndex": -10,
       "dragging": false,
       "measured": {
-        "width": 482,
-        "height": 483
+        "width": 520,
+        "height": 429
       },
       "position": {
-        "x": 321.66390049677454,
-        "y": -44.74250184043521
+        "x": -594.764608793465,
+        "y": -192.4785440215834
       },
       "selected": false,
       "draggable": true
@@ -133,7 +133,7 @@ const flowConfig = {
           ],
           "memories": "[]",
           "messages": "[]",
-          "nodeName": "Generate JSON",
+          "nodeName": "Generate Itinary",
           "attachments": "",
           "generativeModelName": [
             {
