@@ -13,7 +13,7 @@ const promptConfig = {
         {
           "id": "187c2f4b-c23d-4545-abef-73dc897d6b7d",
           "role": "user",
-          "content": "Write your prompt here"
+          "content": "Generate 5 random names"
         }
       ],
       "memories": "[]",
@@ -26,8 +26,10 @@ const promptConfig = {
           "type": "generator/text",
           "params": {},
           "configName": "configA",
-          "provider_name": "",
-          "credential_name": ""
+          "model_name": "gpt-4o-mini",
+          "credentialId": "89792666-002c-4b0c-8cc4-ccd7bbc5f981",
+          "provider_name": "openai",
+          "credential_name": "OpenAI"
         }
       ]
     }
