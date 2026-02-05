@@ -3,14 +3,14 @@ const flowConfig = {
   "name": "3 - Training Data",
   "nodes": [
     {
-      "id": "sticky-note-600",
+      "id": "sticky-note-945",
       "data": {
-        "width": 548,
-        "height": 330,
+        "width": 536,
+        "height": 523,
         "nodeId": "stickyNoteNode",
         "values": {
-          "text": "# **🗄️ Built in VectorDB**\n\n---\n\nLamatic comes with a built in VectorDB \\[ powered by Weaviate\\] so that you don't to deploy maintain your own infra. This allows to setup custom context within our serverless infra for use with models and various application like RAG, Vector Search and Recommendation Systems.\n\nWith built in VectorDB you can -\n\n1. Add realtime data to your context\n2. Create Memories for personalize conversations\n3. Search using Vector / Keyword / Hybrid Mode\n4. Find Records using Filters\n\n---\n\n📖Read Docs - [VectorDB](https://lamatic.ai/docs/context/vectordb)",
-          "color": "green",
+          "text": "# **▶️Try it out**\n\n---\n\n1. Setup Google Drive Integration  \n   1. Connect your Google Drive  \n   2. Select Folder  \n   3. Setup Schedule / Filters ( Optional )\n2. Configure Code node ( Optional )  \n_You can write custom Javascript to modify data or perform some additional functionality._\n3. Vectorizing Data  \n_You can manipulate data with data nodes like transforming text to vectors_  \n👉🏻 Setup your Embedding Model\n4. Index data to VectorDB  \n👉🏻 Create a new vectorDB and set it for context\n5. Run flow by clicking  \n# ▶️ **Test 👇🏻**\n6. Find Setup instructions to connect flow with your backend.\n\n# **〈〉 Setup 👆🏻**",
+          "color": "yellow",
           "nodeId": "stickyNoteNode",
           "nodeName": "Sticky Note",
           "nodeType": "stickyNoteNode"
@@ -20,12 +20,12 @@ const flowConfig = {
       "zIndex": -10,
       "dragging": false,
       "measured": {
-        "width": 548,
-        "height": 330
+        "width": 536,
+        "height": 523
       },
       "position": {
-        "x": -594.2276076646461,
-        "y": 392.83011862352464
+        "x": 270.415302500764,
+        "y": -11.399492082726994
       },
       "selected": false,
       "draggable": true
@@ -59,14 +59,14 @@ const flowConfig = {
       "draggable": true
     },
     {
-      "id": "sticky-note-945",
+      "id": "sticky-note-600",
       "data": {
-        "width": 536,
-        "height": 523,
+        "width": 548,
+        "height": 330,
         "nodeId": "stickyNoteNode",
         "values": {
-          "text": "# **▶️Try it out**\n\n---\n\n1. Setup Google Drive Integration  \n   1. Connect your Google Drive  \n   2. Select Folder  \n   3. Setup Schedule / Filters ( Optional )\n2. Configure Code node ( Optional )  \n_You can write custom Javascript to modify data or perform some additional functionality._\n3. Vectorizing Data  \n_You can manipulate data with data nodes like transforming text to vectors_  \n👉🏻 Setup your Embedding Model\n4. Index data to VectorDB  \n👉🏻 Create a new vectorDB and set it for context\n5. Run flow by clicking  \n# ▶️ **Test 👇🏻**\n6. Find Setup instructions to connect flow with your backend.\n\n# **〈〉 Setup 👆🏻**",
-          "color": "yellow",
+          "text": "# **🗄️ Built in VectorDB**\n\n---\n\nLamatic comes with a built in VectorDB \\[ powered by Weaviate\\] so that you don't to deploy maintain your own infra. This allows to setup custom context within our serverless infra for use with models and various application like RAG, Vector Search and Recommendation Systems.\n\nWith built in VectorDB you can -\n\n1. Add realtime data to your context\n2. Create Memories for personalize conversations\n3. Search using Vector / Keyword / Hybrid Mode\n4. Find Records using Filters\n\n---\n\n📖Read Docs - [VectorDB](https://lamatic.ai/docs/context/vectordb)",
+          "color": "green",
           "nodeId": "stickyNoteNode",
           "nodeName": "Sticky Note",
           "nodeType": "stickyNoteNode"
@@ -76,12 +76,12 @@ const flowConfig = {
       "zIndex": -10,
       "dragging": false,
       "measured": {
-        "width": 536,
-        "height": 523
+        "width": 548,
+        "height": 330
       },
       "position": {
-        "x": 270.415302500764,
-        "y": -11.399492082726994
+        "x": -594.2276076646461,
+        "y": 392.83011862352464
       },
       "selected": false,
       "draggable": true
@@ -94,10 +94,11 @@ const flowConfig = {
         },
         "nodeId": "googleDriveNode",
         "values": {
+          "id": "triggerNode_1",
           "nodeName": "Google Drive",
           "syncMode": "incremental_append",
-          "folderUrl": "https://drive.google.com/drive/folders/19oQAc6pWrpG_tljitAtLZxfXMlo0KmCM",
-          "credentials": "Google Drive OAuth2",
+          "folderUrl": "https://drive.google.com/drive/folders/1vUrqW5Q1VDd5tN9acm-dQYjrn7F_j59Z",
+          "credentials": "Google Drive OAuth",
           "cronExpression": "0 0 00 ? * 1 * UTC"
         },
         "trigger": true
@@ -114,93 +115,7 @@ const flowConfig = {
       "selected": false
     },
     {
-      "id": "codeNode_948",
-      "data": {
-        "label": "New",
-        "modes": {},
-        "nodeId": "codeNode",
-        "values": {
-          "code": "let data={{triggerNode_1.output.content}}\r\nlet vecotorData= \"name:Lamatic.ai\"+data+\"url: https://lamatic.ai/\"\r\nlet metadata={\r\n\"name\":\"Lamatic.ai\",\r\n\"content\":data,\r\n\"url\":\"https://lamatic.ai/\"\r\n}\r\noutput={vecotrData:[vecotorData],metaData:[metadata]}\r\n",
-          "nodeName": "Code"
-        }
-      },
-      "type": "dynamicNode",
-      "measured": {
-        "width": 216,
-        "height": 93
-      },
-      "position": {
-        "x": 0,
-        "y": 130
-      },
-      "selected": false
-    },
-    {
-      "id": "vectorizeNode_808",
-      "data": {
-        "label": "New",
-        "logic": [],
-        "modes": {},
-        "nodeId": "vectorizeNode",
-        "values": {
-          "id": "vectorizeNode_808",
-          "nodeName": "Vectorize",
-          "inputText": "{{codeNode_948.output.vecotrData}}",
-          "embeddingModelName": {
-            "type": "embedder/text",
-            "model_name": "text-embedding-ada-002",
-            "credentialId": "2823d3c3-74b8-45a2-85da-2e45151955f8",
-            "provider_name": "openai",
-            "credential_name": "openai-1"
-          }
-        }
-      },
-      "type": "dynamicNode",
-      "measured": {
-        "width": 216,
-        "height": 93
-      },
-      "position": {
-        "x": 0,
-        "y": 260
-      },
-      "selected": false
-    },
-    {
-      "id": "vectorNode_954",
-      "data": {
-        "label": "New",
-        "logic": [],
-        "modes": {},
-        "nodeId": "vectorNode",
-        "values": {
-          "id": "vectorNode_954",
-          "limit": 20,
-          "action": "index",
-          "filters": "",
-          "nodeName": "VectorDB",
-          "vectorDB": "quickstart",
-          "primaryKeys": [
-            "url"
-          ],
-          "vectorsField": "{{vectorizeNode_808.output.vectors}}",
-          "metadataField": "{{codeNode_948.output.metaData}}",
-          "duplicateOperation": "overwrite"
-        }
-      },
-      "type": "dynamicNode",
-      "measured": {
-        "width": 216,
-        "height": 93
-      },
-      "position": {
-        "x": 0,
-        "y": 390
-      },
-      "selected": false
-    },
-    {
-      "id": "plus-node-addNode_366450",
+      "id": "plus-node-addNode_466114",
       "data": {
         "label": "+",
         "nodeId": "addNode",
@@ -213,42 +128,48 @@ const flowConfig = {
       },
       "position": {
         "x": 0,
-        "y": 520
+        "y": 260
+      }
+    },
+    {
+      "id": "codeNode_486",
+      "data": {
+        "label": "New",
+        "logic": [],
+        "modes": {},
+        "nodeId": "codeNode",
+        "values": {
+          "id": "codeNode_486",
+          "code": "output = {{triggerNode_1.output}}",
+          "nodeName": "Code"
+        }
       },
-      "selected": false
+      "type": "dynamicNode",
+      "measured": {
+        "width": 216,
+        "height": 93
+      },
+      "position": {
+        "x": 0,
+        "y": 130
+      },
+      "selected": true
     }
   ],
   "edges": [
     {
-      "id": "codeNode_948-vectorizeNode_808-999",
-      "type": "defaultEdge",
-      "source": "codeNode_948",
-      "target": "vectorizeNode_808",
-      "selected": false,
-      "sourceHandle": "bottom",
-      "targetHandle": "top"
-    },
-    {
-      "id": "vectorNode_954-plus-node-addNode_366450-134",
-      "type": "defaultEdge",
-      "source": "vectorNode_954",
-      "target": "plus-node-addNode_366450",
-      "sourceHandle": "bottom",
-      "targetHandle": "top"
-    },
-    {
-      "id": "vectorizeNode_808-vectorNode_954-497",
-      "type": "defaultEdge",
-      "source": "vectorizeNode_808",
-      "target": "vectorNode_954",
-      "sourceHandle": "bottom",
-      "targetHandle": "top"
-    },
-    {
-      "id": "triggerNode_1-codeNode_948-291",
+      "id": "triggerNode_1-codeNode_486-626",
       "type": "defaultEdge",
       "source": "triggerNode_1",
-      "target": "codeNode_948",
+      "target": "codeNode_486",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "codeNode_486-plus-node-addNode_466114-190",
+      "type": "defaultEdge",
+      "source": "codeNode_486",
+      "target": "plus-node-addNode_466114",
       "sourceHandle": "bottom",
       "targetHandle": "top"
     }
