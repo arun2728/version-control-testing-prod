@@ -1,6 +1,35 @@
 const flowConfig = {
   "id": "dadeafde-6ee9-478c-839c-b5f28476fdff",
   "name": "1 - Getting Started",
+  "edges": [
+    {
+      "id": "triggerNode_1-LLMNode_567",
+      "type": "defaultEdge",
+      "source": "triggerNode_1",
+      "target": "LLMNode_567",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "LLMNode_567-responseNode_triggerNode_1",
+      "type": "defaultEdge",
+      "source": "LLMNode_567",
+      "target": "responseNode_triggerNode_1",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "response-responseNode_triggerNode_1",
+      "type": "responseEdge",
+      "source": "triggerNode_1",
+      "target": "responseNode_triggerNode_1",
+      "sourceHandle": "to-response",
+      "targetHandle": "from-trigger"
+    }
+  ],
+  "status": "active",
+  "created_at": "2026-02-09T14:56:32.506987+00:00",
+  "trigger_id": null,
   "nodes": [
     {
       "id": "sticky-gm21yx26f",
@@ -256,35 +285,7 @@ const flowConfig = {
       },
       "selected": false
     }
-  ],
-  "edges": [
-    {
-      "id": "triggerNode_1-LLMNode_567",
-      "type": "defaultEdge",
-      "source": "triggerNode_1",
-      "target": "LLMNode_567",
-      "sourceHandle": "bottom",
-      "targetHandle": "top"
-    },
-    {
-      "id": "LLMNode_567-responseNode_triggerNode_1",
-      "type": "defaultEdge",
-      "source": "LLMNode_567",
-      "target": "responseNode_triggerNode_1",
-      "sourceHandle": "bottom",
-      "targetHandle": "top"
-    },
-    {
-      "id": "response-responseNode_triggerNode_1",
-      "type": "responseEdge",
-      "source": "triggerNode_1",
-      "target": "responseNode_triggerNode_1",
-      "sourceHandle": "to-response",
-      "targetHandle": "from-trigger"
-    }
-  ],
-  "status": "active",
-  "created_at": "2026-02-09T14:56:32.506987+00:00"
+  ]
 };
 
 export async function getNodesAndEdges(): Promise<{

@@ -1,7 +1,37 @@
 const flowConfig = {
   "id": "69b5e37e-0e9f-4f8d-9329-cb31021f911d",
-  "slug": "BrainyOptician-8338",
   "name": "2 - API Basics",
+  "edges": [
+    {
+      "id": "triggerNode_1-InstructorLLMNode_862",
+      "type": "defaultEdge",
+      "source": "triggerNode_1",
+      "target": "InstructorLLMNode_862",
+      "selected": false,
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "InstructorLLMNode_862-responseNode_triggerNode_1",
+      "type": "defaultEdge",
+      "source": "InstructorLLMNode_862",
+      "target": "responseNode_triggerNode_1",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "response-trigger_triggerNode_1",
+      "type": "responseEdge",
+      "source": "triggerNode_1",
+      "target": "responseNode_triggerNode_1",
+      "selected": false,
+      "sourceHandle": "to-response",
+      "targetHandle": "from-trigger"
+    }
+  ],
+  "status": "active",
+  "created_at": "2026-02-02T06:07:10.280043+00:00",
+  "trigger_id": null,
   "nodes": [
     {
       "id": "sticky-note-899",
@@ -186,39 +216,7 @@ const flowConfig = {
       },
       "selected": false
     }
-  ],
-  "edges": [
-    {
-      "id": "triggerNode_1-InstructorLLMNode_862",
-      "type": "defaultEdge",
-      "source": "triggerNode_1",
-      "target": "InstructorLLMNode_862",
-      "selected": false,
-      "sourceHandle": "bottom",
-      "targetHandle": "top"
-    },
-    {
-      "id": "InstructorLLMNode_862-responseNode_triggerNode_1",
-      "type": "defaultEdge",
-      "source": "InstructorLLMNode_862",
-      "target": "responseNode_triggerNode_1",
-      "sourceHandle": "bottom",
-      "targetHandle": "top"
-    },
-    {
-      "id": "response-trigger_triggerNode_1",
-      "type": "responseEdge",
-      "source": "triggerNode_1",
-      "target": "responseNode_triggerNode_1",
-      "selected": false,
-      "sourceHandle": "to-response",
-      "targetHandle": "from-trigger"
-    }
-  ],
-  "status": "active",
-  "created_at": "2026-02-02T06:07:10.280043+00:00",
-  "description": "",
-  "trigger_id": null
+  ]
 };
 
 export async function getNodesAndEdges(): Promise<{

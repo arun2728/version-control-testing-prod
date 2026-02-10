@@ -1,6 +1,27 @@
 const flowConfig = {
   "id": "1325db37-d329-451a-a190-e1117c2e9b15",
   "name": "3 - Training Data",
+  "edges": [
+    {
+      "id": "triggerNode_1-codeNode_486-626",
+      "type": "defaultEdge",
+      "source": "triggerNode_1",
+      "target": "codeNode_486",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "codeNode_486-plus-node-addNode_466114-190",
+      "type": "defaultEdge",
+      "source": "codeNode_486",
+      "target": "plus-node-addNode_466114",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    }
+  ],
+  "status": "active",
+  "created_at": "2026-02-05T07:23:19.590267+00:00",
+  "trigger_id": 2,
   "nodes": [
     {
       "id": "sticky-note-945",
@@ -155,27 +176,7 @@ const flowConfig = {
       },
       "selected": true
     }
-  ],
-  "edges": [
-    {
-      "id": "triggerNode_1-codeNode_486-626",
-      "type": "defaultEdge",
-      "source": "triggerNode_1",
-      "target": "codeNode_486",
-      "sourceHandle": "bottom",
-      "targetHandle": "top"
-    },
-    {
-      "id": "codeNode_486-plus-node-addNode_466114-190",
-      "type": "defaultEdge",
-      "source": "codeNode_486",
-      "target": "plus-node-addNode_466114",
-      "sourceHandle": "bottom",
-      "targetHandle": "top"
-    }
-  ],
-  "status": "active",
-  "created_at": "2026-02-05T07:23:19.590267+00:00"
+  ]
 };
 
 export async function getNodesAndEdges(): Promise<{
