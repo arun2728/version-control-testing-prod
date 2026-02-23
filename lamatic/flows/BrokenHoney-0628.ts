@@ -1,47 +1,18 @@
 const flowConfig = {
   "id": "dadeafde-6ee9-478c-839c-b5f28476fdff",
   "name": "1 - Getting Started",
-  "edges": [
-    {
-      "id": "triggerNode_1-LLMNode_567",
-      "type": "defaultEdge",
-      "source": "triggerNode_1",
-      "target": "LLMNode_567",
-      "sourceHandle": "bottom",
-      "targetHandle": "top"
-    },
-    {
-      "id": "LLMNode_567-responseNode_triggerNode_1",
-      "type": "defaultEdge",
-      "source": "LLMNode_567",
-      "target": "responseNode_triggerNode_1",
-      "sourceHandle": "bottom",
-      "targetHandle": "top"
-    },
-    {
-      "id": "response-responseNode_triggerNode_1",
-      "type": "responseEdge",
-      "source": "triggerNode_1",
-      "target": "responseNode_triggerNode_1",
-      "sourceHandle": "to-response",
-      "targetHandle": "from-trigger"
-    }
-  ],
-  "status": "active",
-  "created_at": "2026-02-09T14:56:32.506987+00:00",
-  "trigger_id": null,
   "nodes": [
     {
-      "id": "sticky-gm21yx26f",
+      "id": "sticky-note-609",
       "data": {
         "modes": {},
-        "width": 646,
-        "height": 296,
+        "width": 644,
+        "height": 235,
         "nodeId": "stickyNoteNode",
         "values": {
-          "id": "sticky-gm21yx26f",
-          "text": "# **➕ Nodes**\n\n---\n\n_Nodes are the fundamental building blocks of a flow. Each node serves a specific purpose, acting as a self-contained unit that processes input and produces output. This modular approach allows users to create complex flows by interconnecting various nodes._\n\nNode Types :\n\n1. **📱 Apps** \\- Integrate third-party applications into your flow.\n2. **🤖 AI** \\- Perform AI operations within your flow.\n3. **🛢️ Data** \\- Manipulate and transform data within your flow.\n4. **♾️ Logic** \\- Control the flow of execution in your flow.",
-          "color": "blue",
+          "id": "sticky-note-609",
+          "text": "# **⚡️ Flow Trigger**\n\n---\n\n_A trigger initiates the flow. It can be a built-in tool or an integration with an external application._\n\nTrigger Types:\n\n1. **📱App** \\- Initiate flow from an external application integration\n2. **🔌 Interface** \\- API / Webhook\n3. **💬 Widget** \\- Prebuilt UI component ( Chat, Search )\n\n---\n\n📖 Read Docs - [Flows](https://lamatic.ai/docs/flows)",
+          "color": "purple",
           "nodeId": "stickyNoteNode",
           "nodeName": "Sticky Note",
           "nodeType": "stickyNoteNode"
@@ -51,42 +22,12 @@ const flowConfig = {
       "zIndex": -10,
       "dragging": false,
       "measured": {
-        "width": 646,
-        "height": 296
+        "width": 644,
+        "height": 235
       },
       "position": {
-        "x": -711.153989769601,
-        "y": 64.44929392988769
-      },
-      "selected": false,
-      "draggable": true
-    },
-    {
-      "id": "sticky-kzv63mb30",
-      "data": {
-        "modes": {},
-        "width": 645,
-        "height": 121,
-        "nodeId": "stickyNoteNode",
-        "values": {
-          "id": "sticky-kzv63mb30",
-          "text": "# **💬 Flow response**\n\n---\n\n## _The final step of your flow can send output to an external system, which is particularly useful for flows initiated by triggers like Chat or GraphQL API integrations._",
-          "color": "green",
-          "nodeId": "stickyNoteNode",
-          "nodeName": "Sticky Note",
-          "nodeType": "stickyNoteNode"
-        }
-      },
-      "type": "stickyNoteNode",
-      "zIndex": -10,
-      "dragging": false,
-      "measured": {
-        "width": 645,
-        "height": 121
-      },
-      "position": {
-        "x": -710.6880629678146,
-        "y": 370.6310610504351
+        "x": -711.2333044557109,
+        "y": -174.3119227329574
       },
       "selected": false,
       "draggable": true
@@ -122,16 +63,16 @@ const flowConfig = {
       "draggable": true
     },
     {
-      "id": "sticky-note-609",
+      "id": "sticky-kzv63mb30",
       "data": {
         "modes": {},
-        "width": 644,
-        "height": 235,
+        "width": 645,
+        "height": 121,
         "nodeId": "stickyNoteNode",
         "values": {
-          "id": "sticky-note-609",
-          "text": "# **⚡️ Flow Trigger**\n\n---\n\n_A trigger initiates the flow. It can be a built-in tool or an integration with an external application._\n\nTrigger Types:\n\n1. **📱App** \\- Initiate flow from an external application integration\n2. **🔌 Interface** \\- API / Webhook\n3. **💬 Widget** \\- Prebuilt UI component ( Chat, Search )\n\n---\n\n📖 Read Docs - [Flows](https://lamatic.ai/docs/flows)",
-          "color": "purple",
+          "id": "sticky-kzv63mb30",
+          "text": "# **💬 Flow response**\n\n---\n\n## _The final step of your flow can send output to an external system, which is particularly useful for flows initiated by triggers like Chat or GraphQL API integrations._",
+          "color": "green",
           "nodeId": "stickyNoteNode",
           "nodeName": "Sticky Note",
           "nodeType": "stickyNoteNode"
@@ -141,12 +82,42 @@ const flowConfig = {
       "zIndex": -10,
       "dragging": false,
       "measured": {
-        "width": 644,
-        "height": 235
+        "width": 645,
+        "height": 121
       },
       "position": {
-        "x": -711.2333044557109,
-        "y": -174.3119227329574
+        "x": -710.6880629678146,
+        "y": 370.6310610504351
+      },
+      "selected": false,
+      "draggable": true
+    },
+    {
+      "id": "sticky-gm21yx26f",
+      "data": {
+        "modes": {},
+        "width": 646,
+        "height": 296,
+        "nodeId": "stickyNoteNode",
+        "values": {
+          "id": "sticky-gm21yx26f",
+          "text": "# **➕ Nodes**\n\n---\n\n_Nodes are the fundamental building blocks of a flow. Each node serves a specific purpose, acting as a self-contained unit that processes input and produces output. This modular approach allows users to create complex flows by interconnecting various nodes._\n\nNode Types :\n\n1. **📱 Apps** \\- Integrate third-party applications into your flow.\n2. **🤖 AI** \\- Perform AI operations within your flow.\n3. **🛢️ Data** \\- Manipulate and transform data within your flow.\n4. **♾️ Logic** \\- Control the flow of execution in your flow.",
+          "color": "blue",
+          "nodeId": "stickyNoteNode",
+          "nodeName": "Sticky Note",
+          "nodeType": "stickyNoteNode"
+        }
+      },
+      "type": "stickyNoteNode",
+      "zIndex": -10,
+      "dragging": false,
+      "measured": {
+        "width": 646,
+        "height": 296
+      },
+      "position": {
+        "x": -711.153989769601,
+        "y": 64.44929392988769
       },
       "selected": false,
       "draggable": true
@@ -258,6 +229,31 @@ const flowConfig = {
       "selected": false
     },
     {
+      "id": "flowNode_722",
+      "data": {
+        "label": "dynamicNode node",
+        "logic": [],
+        "modes": {},
+        "nodeId": "flowNode",
+        "values": {
+          "id": "flowNode_722",
+          "flowId": "69b5e37e-0e9f-4f8d-9329-cb31021f911d",
+          "nodeName": "Execute 2 - API Basics",
+          "requestInput": "{\"destination\":\"\",\"start_date\":\"\",\"end_date\":\"\",\"budget_usd\":\"\",\"interests\":\"\"}"
+        }
+      },
+      "type": "dynamicNode",
+      "measured": {
+        "width": 216,
+        "height": 93
+      },
+      "position": {
+        "x": 0,
+        "y": 260
+      },
+      "selected": true
+    },
+    {
       "id": "responseNode_triggerNode_1",
       "data": {
         "label": "Response",
@@ -281,11 +277,47 @@ const flowConfig = {
       },
       "position": {
         "x": 0,
-        "y": 260
+        "y": 390
       },
       "selected": false
     }
-  ]
+  ],
+  "edges": [
+    {
+      "id": "triggerNode_1-LLMNode_567",
+      "type": "defaultEdge",
+      "source": "triggerNode_1",
+      "target": "LLMNode_567",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "LLMNode_567-flowNode_722",
+      "type": "defaultEdge",
+      "source": "LLMNode_567",
+      "target": "flowNode_722",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "flowNode_722-responseNode_triggerNode_1",
+      "type": "defaultEdge",
+      "source": "flowNode_722",
+      "target": "responseNode_triggerNode_1",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "response-responseNode_triggerNode_1",
+      "type": "responseEdge",
+      "source": "triggerNode_1",
+      "target": "responseNode_triggerNode_1",
+      "sourceHandle": "to-response",
+      "targetHandle": "from-trigger"
+    }
+  ],
+  "status": "active",
+  "created_at": "2026-02-09T14:56:32.506987+00:00"
 };
 
 export async function getNodesAndEdges(): Promise<{
