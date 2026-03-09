@@ -74,9 +74,9 @@ const flowConfig = {
             "type": "embedder/text",
             "params": {},
             "model_name": "text-embedding-ada-002",
-            "credentialId": "3a46e042-9ced-4784-b392-fc240a0c58ec",
+            "credentialId": "c9828672-f799-4217-b954-fbc44ac44c85",
             "provider_name": "openai",
-            "credential_name": "OpenAI"
+            "credential_name": "OpenAI Testing"
           }
         }
       },
@@ -89,7 +89,7 @@ const flowConfig = {
         "x": 0,
         "y": 260
       },
-      "selected": true,
+      "selected": false,
       "draggable": false
     },
     {
@@ -127,7 +127,7 @@ const flowConfig = {
         "x": 0,
         "y": 390
       },
-      "selected": false,
+      "selected": true,
       "draggable": false
     },
     {
