@@ -3,6 +3,32 @@ const flowConfig = {
   "name": "Index",
   "nodes": [
     {
+      "id": "triggerNode_1",
+      "data": {
+        "modes": {},
+        "nodeId": "graphqlNode",
+        "schema": {
+          "sampleOutput": "string"
+        },
+        "values": {
+          "nodeName": "API Request",
+          "responeType": "realtime",
+          "advance_schema": "{\"sampleInput\":\"string\"}"
+        },
+        "trigger": true
+      },
+      "type": "triggerNode",
+      "measured": {
+        "width": 216,
+        "height": 93
+      },
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "selected": false
+    },
+    {
       "id": "codeNode_224",
       "data": {
         "logic": [],
@@ -27,6 +53,7 @@ const flowConfig = {
         "x": 0,
         "y": 130
       },
+      "selected": false,
       "draggable": false
     },
     {
@@ -62,7 +89,7 @@ const flowConfig = {
         "x": 0,
         "y": 260
       },
-      "selected": false,
+      "selected": true,
       "draggable": false
     },
     {
@@ -82,7 +109,7 @@ const flowConfig = {
           "action": "index",
           "filters": "",
           "nodeName": "VectorDB",
-          "vectorDB": "Testing123",
+          "vectorDB": "TestingIndexing",
           "primaryKeys": [
             "file_id"
           ],
@@ -102,32 +129,6 @@ const flowConfig = {
       },
       "selected": false,
       "draggable": false
-    },
-    {
-      "id": "triggerNode_1",
-      "data": {
-        "modes": {},
-        "nodeId": "graphqlNode",
-        "schema": {
-          "sampleOutput": "string"
-        },
-        "values": {
-          "nodeName": "API Request",
-          "responeType": "realtime",
-          "advance_schema": "{\"sampleInput\":\"string\"}"
-        },
-        "trigger": true
-      },
-      "type": "triggerNode",
-      "measured": {
-        "width": 216,
-        "height": 93
-      },
-      "position": {
-        "x": 0,
-        "y": 0
-      },
-      "selected": false
     },
     {
       "id": "responseNode_triggerNode_1",
