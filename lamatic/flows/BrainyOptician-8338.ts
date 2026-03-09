@@ -127,8 +127,44 @@ const flowConfig = {
         "x": 0,
         "y": 390
       },
-      "selected": true,
+      "selected": false,
       "draggable": false
+    },
+    {
+      "id": "searchNode_384",
+      "data": {
+        "label": "dynamicNode node",
+        "logic": [],
+        "modes": {},
+        "nodeId": "searchNode",
+        "values": {
+          "id": "searchNode_384",
+          "limit": "3",
+          "filters": "[]",
+          "nodeName": "Vector Search",
+          "vectorDB": "TestingIndexing",
+          "certainty": "0.85",
+          "searchQuery": "what is lamatic",
+          "embeddingModelName": {
+            "type": "embedder/text",
+            "params": {},
+            "model_name": "text-embedding-ada-002",
+            "credentialId": "3a46e042-9ced-4784-b392-fc240a0c58ec",
+            "provider_name": "openai",
+            "credential_name": "OpenAI"
+          }
+        }
+      },
+      "type": "dynamicNode",
+      "measured": {
+        "width": 216,
+        "height": 93
+      },
+      "position": {
+        "x": 0,
+        "y": 520
+      },
+      "selected": false
     },
     {
       "id": "responseNode_triggerNode_1",
@@ -155,7 +191,7 @@ const flowConfig = {
       },
       "position": {
         "x": 0,
-        "y": 520
+        "y": 650
       },
       "selected": false
     }
@@ -186,9 +222,17 @@ const flowConfig = {
       "targetHandle": "top"
     },
     {
-      "id": "vectorNode_534-responseNode_triggerNode_1",
+      "id": "vectorNode_534-searchNode_384",
       "type": "defaultEdge",
       "source": "vectorNode_534",
+      "target": "searchNode_384",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "searchNode_384-responseNode_triggerNode_1",
+      "type": "defaultEdge",
+      "source": "searchNode_384",
       "target": "responseNode_triggerNode_1",
       "sourceHandle": "bottom",
       "targetHandle": "top"
