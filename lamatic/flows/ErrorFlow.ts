@@ -34,7 +34,7 @@ const flowConfig = {
         "nodeId": "codeNode",
         "values": {
           "id": "codeNode_735",
-          "code": "// Assign the value you want to return from this code node to `output`. \n// The `output` variable is already declared.\n\nthrow new Error(\"testing error\")",
+          "code": "// Assign the value you want to return from this code node to `output`. \n// The `output` variable is already declared.\n\n// throw new Error(\"testing error\")\n\nconsole.log(\"Loading....\")",
           "nodeName": "Code"
         }
       },
