@@ -4,15 +4,103 @@ const flowConfig = {
   "nodes": [
     {
       "id": "triggerNode_1",
-      "data": {},
+      "data": {
+        "modes": {},
+        "nodeId": "graphqlNode",
+        "values": {
+          "nodeName": "API Request",
+          "responeType": "realtime",
+          "advance_schema": "{\"sampleInput\":\"string\"}"
+        },
+        "trigger": true
+      },
       "type": "triggerNode",
+      "measured": {
+        "width": 216,
+        "height": 93
+      },
       "position": {
         "x": 0,
         "y": 0
+      },
+      "selected": false
+    },
+    {
+      "id": "codeNode_735",
+      "data": {
+        "label": "dynamicNode node",
+        "logic": [],
+        "modes": {},
+        "nodeId": "codeNode",
+        "values": {
+          "id": "codeNode_735",
+          "code": "// Assign the value you want to return from this code node to `output`. \n// The `output` variable is already declared.\n\nthrow new Error(\"testing error\")",
+          "nodeName": "Code"
+        }
+      },
+      "type": "dynamicNode",
+      "measured": {
+        "width": 216,
+        "height": 93
+      },
+      "position": {
+        "x": 0,
+        "y": 130
+      },
+      "selected": true
+    },
+    {
+      "id": "responseNode_triggerNode_1",
+      "data": {
+        "label": "Response",
+        "nodeId": "graphqlResponseNode",
+        "values": {
+          "headers": "{\"content-type\":\"application/json\"}",
+          "retries": "0",
+          "nodeName": "API Response",
+          "webhookUrl": "",
+          "retry_delay": "0",
+          "outputMapping": "{}"
+        },
+        "isResponseNode": true
+      },
+      "type": "responseNode",
+      "measured": {
+        "width": 216,
+        "height": 93
+      },
+      "position": {
+        "x": 0,
+        "y": 260
       }
     }
   ],
-  "edges": [],
+  "edges": [
+    {
+      "id": "triggerNode_1-codeNode_735",
+      "type": "defaultEdge",
+      "source": "triggerNode_1",
+      "target": "codeNode_735",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "codeNode_735-responseNode_triggerNode_1",
+      "type": "defaultEdge",
+      "source": "codeNode_735",
+      "target": "responseNode_triggerNode_1",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "response-trigger_triggerNode_1",
+      "type": "responseEdge",
+      "source": "triggerNode_1",
+      "target": "responseNode_triggerNode_1",
+      "sourceHandle": "to-response",
+      "targetHandle": "from-trigger"
+    }
+  ],
   "status": "active",
   "created_at": "2026-03-12T15:23:50.235814+00:00"
 };
