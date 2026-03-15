@@ -7,6 +7,11 @@ const flowConfig = {
       "data": {
         "modes": {},
         "nodeId": "s3Node",
+        "schema": {
+          "content": "string",
+          "document_key": "string",
+          "document_url": "string"
+        },
         "values": {
           "id": "triggerNode_1",
           "globs": [
@@ -32,10 +37,10 @@ const flowConfig = {
         "x": 0,
         "y": 0
       },
-      "selected": true
+      "selected": false
     },
     {
-      "id": "plus-node-addNode_triggerNode_1340",
+      "id": "plus-node-addNode_318147",
       "data": {
         "label": "+",
         "nodeId": "addNode",
@@ -48,17 +53,48 @@ const flowConfig = {
       },
       "position": {
         "x": 0,
+        "y": 260
+      }
+    },
+    {
+      "id": "codeNode_192",
+      "data": {
+        "label": "New",
+        "logic": [],
+        "modes": {},
+        "nodeId": "codeNode",
+        "values": {
+          "id": "codeNode_192",
+          "code": "// Assign the value you want to return from this code node to `output`. \n// The `output` variable is already declared.\n\noutput = {\n  \"adssa\":\"asdas\"\n}",
+          "nodeName": "Code"
+        }
+      },
+      "type": "dynamicNode",
+      "measured": {
+        "width": 216,
+        "height": 93
+      },
+      "position": {
+        "x": 0,
         "y": 130
       },
-      "selected": false
+      "selected": true
     }
   ],
   "edges": [
     {
-      "id": "triggerNode_1-plus-node-addNode_triggerNode_1340",
+      "id": "triggerNode_1-codeNode_192-940",
       "type": "defaultEdge",
       "source": "triggerNode_1",
-      "target": "plus-node-addNode_triggerNode_1340",
+      "target": "codeNode_192",
+      "sourceHandle": "bottom",
+      "targetHandle": "top"
+    },
+    {
+      "id": "codeNode_192-plus-node-addNode_318147-175",
+      "type": "defaultEdge",
+      "source": "codeNode_192",
+      "target": "plus-node-addNode_318147",
       "sourceHandle": "bottom",
       "targetHandle": "top"
     }
