@@ -1,6 +1,6 @@
 const flowConfig = {
   "id": "85b6afdd-2b55-46e4-8603-5d73d4cae1a2",
-  "name": "Error Flow",
+  "name": "SQL",
   "nodes": [
     {
       "id": "triggerNode_1",
@@ -26,16 +26,18 @@ const flowConfig = {
       "selected": false
     },
     {
-      "id": "codeNode_735",
+      "id": "mysqlNode_749",
       "data": {
         "label": "dynamicNode node",
         "logic": [],
         "modes": {},
-        "nodeId": "codeNode",
+        "nodeId": "mysqlNode",
         "values": {
-          "id": "codeNode_735",
-          "code": "// Assign the value you want to return from this code node to `output`. \n// The `output` variable is already declared.\n\n// throw new Error(\"testing error\")\n\nconsole.log(\"Loading....\")",
-          "nodeName": "Code"
+          "id": "mysqlNode_749",
+          "query": "select * from employees",
+          "action": "runQuery",
+          "nodeName": "MySQL",
+          "credentials": "MySQL"
         }
       },
       "type": "dynamicNode",
@@ -47,7 +49,7 @@ const flowConfig = {
         "x": 0,
         "y": 130
       },
-      "selected": true
+      "selected": false
     },
     {
       "id": "responseNode_triggerNode_1",
@@ -55,12 +57,13 @@ const flowConfig = {
         "label": "Response",
         "nodeId": "graphqlResponseNode",
         "values": {
+          "id": "responseNode_triggerNode_1",
           "headers": "{\"content-type\":\"application/json\"}",
           "retries": "0",
           "nodeName": "API Response",
           "webhookUrl": "",
           "retry_delay": "0",
-          "outputMapping": "{}"
+          "outputMapping": "{\n  \"data\": \"{{mysqlNode_749.output}}\"\n}"
         },
         "isResponseNode": true
       },
@@ -72,22 +75,23 @@ const flowConfig = {
       "position": {
         "x": 0,
         "y": 260
-      }
+      },
+      "selected": true
     }
   ],
   "edges": [
     {
-      "id": "triggerNode_1-codeNode_735",
+      "id": "triggerNode_1-mysqlNode_749",
       "type": "defaultEdge",
       "source": "triggerNode_1",
-      "target": "codeNode_735",
+      "target": "mysqlNode_749",
       "sourceHandle": "bottom",
       "targetHandle": "top"
     },
     {
-      "id": "codeNode_735-responseNode_triggerNode_1",
+      "id": "mysqlNode_749-responseNode_triggerNode_1",
       "type": "defaultEdge",
-      "source": "codeNode_735",
+      "source": "mysqlNode_749",
       "target": "responseNode_triggerNode_1",
       "sourceHandle": "bottom",
       "targetHandle": "top"
