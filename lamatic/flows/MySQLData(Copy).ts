@@ -27,24 +27,7 @@ const flowConfig = {
         "x": 0,
         "y": 0
       },
-      "selected": false
-    },
-    {
-      "id": "plus-node-addNode_977966",
-      "data": {
-        "label": "+",
-        "nodeId": "addNode",
-        "values": {}
-      },
-      "type": "addNode",
-      "measured": {
-        "width": 216,
-        "height": 100
-      },
-      "position": {
-        "x": 0,
-        "y": 260
-      }
+      "selected": true
     },
     {
       "id": "apiNode_983",
@@ -74,7 +57,24 @@ const flowConfig = {
         "x": 0,
         "y": 130
       },
-      "selected": true
+      "selected": false
+    },
+    {
+      "id": "plus-node-addNode_977966",
+      "data": {
+        "label": "+",
+        "nodeId": "addNode",
+        "values": {}
+      },
+      "type": "addNode",
+      "measured": {
+        "width": 216,
+        "height": 100
+      },
+      "position": {
+        "x": 0,
+        "y": 260
+      }
     }
   ],
   "edges": [
