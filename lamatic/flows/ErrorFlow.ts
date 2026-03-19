@@ -67,8 +67,8 @@ const flowConfig = {
               "params": {},
               "configName": "configA",
               "model_name": "{{triggerNode_1.output.model_name}}",
-              "credentialId": "“{{triggerNode_1.output.credentialId}}”",
-              "provider_name": "“{{triggerNode_1.output.provider}}”",
+              "credentialId": "{{triggerNode_1.output.credentialId}}",
+              "provider_name": "openai",
               "credential_name": "OpenAI"
             }
           ]
@@ -83,7 +83,7 @@ const flowConfig = {
         "x": 0,
         "y": 130
       },
-      "selected": false
+      "selected": true
     },
     {
       "id": "responseNode_triggerNode_1",
@@ -112,7 +112,7 @@ const flowConfig = {
         "x": 0,
         "y": 260
       },
-      "selected": true
+      "selected": false
     }
   ],
   "edges": [
