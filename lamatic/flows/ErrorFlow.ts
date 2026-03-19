@@ -7,6 +7,9 @@ const flowConfig = {
       "data": {
         "modes": {},
         "nodeId": "graphqlNode",
+        "schema": {
+          "sampleOutput": "string"
+        },
         "values": {
           "id": "triggerNode_1",
           "nodeName": "API Request",
@@ -32,6 +35,12 @@ const flowConfig = {
         "label": "New",
         "modes": {},
         "nodeId": "LLMNode",
+        "schema": {
+          "_meta": "object",
+          "images": "array",
+          "tool_calls": "object",
+          "generatedResponse": "string"
+        },
         "values": {
           "id": "LLMNode_366",
           "tools": [],
@@ -57,9 +66,15 @@ const flowConfig = {
               "type": "generator/text",
               "params": {},
               "configName": "configA",
-              "model_name": "gpt-4o-mini",
-              "credentialId": "3a46e042-9ced-4784-b392-fc240a0c58ec",
-              "provider_name": "openai",
+              "model_name": {
+                "[object Object]": null
+              },
+              "credentialId": {
+                "[object Object]": null
+              },
+              "provider_name": {
+                "[object Object]": null
+              },
               "credential_name": "OpenAI"
             }
           ]
@@ -80,7 +95,9 @@ const flowConfig = {
       "id": "responseNode_triggerNode_1",
       "data": {
         "label": "Response",
+        "modes": {},
         "nodeId": "graphqlResponseNode",
+        "schema": {},
         "values": {
           "id": "responseNode_triggerNode_1",
           "headers": "{\"content-type\":\"application/json\"}",
@@ -106,7 +123,7 @@ const flowConfig = {
   ],
   "edges": [
     {
-      "id": "triggerNode_1-LLMNode_366-718",
+      "id": "triggerNode_1-LLMNode_366",
       "type": "defaultEdge",
       "source": "triggerNode_1",
       "target": "LLMNode_366",
@@ -114,7 +131,7 @@ const flowConfig = {
       "targetHandle": "top"
     },
     {
-      "id": "LLMNode_366-responseNode_triggerNode_1-449",
+      "id": "LLMNode_366-responseNode_triggerNode_1",
       "type": "defaultEdge",
       "source": "LLMNode_366",
       "target": "responseNode_triggerNode_1",
@@ -122,7 +139,7 @@ const flowConfig = {
       "targetHandle": "top"
     },
     {
-      "id": "response-trigger_triggerNode_1",
+      "id": "response-responseNode_triggerNode_1",
       "type": "responseEdge",
       "source": "triggerNode_1",
       "target": "responseNode_triggerNode_1",
