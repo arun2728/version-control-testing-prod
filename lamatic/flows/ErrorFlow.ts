@@ -66,15 +66,9 @@ const flowConfig = {
               "type": "generator/text",
               "params": {},
               "configName": "configA",
-              "model_name": {
-                "[object Object]": null
-              },
-              "credentialId": {
-                "[object Object]": null
-              },
-              "provider_name": {
-                "[object Object]": null
-              },
+              "model_name": "{{triggerNode_1.output.model_name}}",
+              "credentialId": "“{{triggerNode_1.output.credentialId}}”",
+              "provider_name": "“{{triggerNode_1.output.provider}}”",
               "credential_name": "OpenAI"
             }
           ]
